@@ -1,10 +1,10 @@
-package com.poo.project;
+package fatec.poo.projetoPOO;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class ProjetoPooApplicationTests {
 
 	@Test
 	void contextLoads() {
