@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1 POO</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <!-- Rodar no Eclipse-->
+    <link rel="stylesheet" href="css/GlobalComponents.css">
+    <link rel="stylesheet" href="css/Registro.css">
+    <link rel="stylesheet" href="css/BeautyInput.css">
+    <link rel="stylesheet" href="css/BeautySelect.css">
+    <link rel="stylesheet" href="css/BeautyButton.css">
+
+    <script src="js/Entidades/Client.js"></script>
+
+    <script src="js/Utilitarios/DateParser.js"></script>
+    <script src="js/Utilitarios/ServerRequester.js"></script>
+
+    <script src="js/Componentes/BeautySelect.js"></script>
+    <script src="js/Componentes/BeautyInput.js"></script>
+    <script src="js/Componentes/BeautyButton.js"></script>
+
+    <script src="js/Paginas/Registro.js"></script>
+    
+
+    <!-- Rodar no VSCode 
+    <link rel="stylesheet" href="../static/css/GlobalComponents.css">
+    <link rel="stylesheet" href="../static/css/Registro.css">
+    <link rel="stylesheet" href="../static/css/BeautyInput.css">
+    <link rel="stylesheet" href="../static/css/BeautySelect.css">
+    <link rel="stylesheet" href="../static/css/BeautyButton.css">
+
+    <script src="../static/js/Entidades/Client.js"></script>
+
+    <script src="../static/js/Utilitarios/DateParser.js"></script>
+    <script src="../static/js/Utilitarios/ServerRequester.js"></script>
+
+    <script src="../static/js/Componentes/BeautySelect.js"></script>
+    <script src="../static/js/Componentes/BeautyInput.js"></script>
+    <script src="../static/js/Componentes/BeautyButton.js"></script>
+
+    <script src="../static/js/Paginas/Registro.js"></script>
+    -->
+
+</head>
+<body>
+    <div class="vBox vBoxBorder">
+
+        <div class="vBox">
+            <h2 class="title">Realizar cadastro em World Beauty</h2>
+            <p>Insira seus dados para realizar o cadastro</p>
+        </div>
+
+        <form class="vBox" onsubmit="submeterFormulario(event)">
+            <beauty-input id="nameInput" type="text" title="Insira seu nome" icon="user" placeholder="Nome" required="true"></beauty-input>
+            <beauty-input id="telefoneInput" type="text" title="Insira seu telefone" icon="phone" placeholder="Telefone" required="true"></beauty-input>
+            <beauty-input id="dataNascimentoInput" type="date" title="Insira sua data de nascimento" icon="calendar-alt" placeholder="Data de nascimento" required="true"></beauty-input>
+            <beauty-select id="generoSelect" title="Escolha seu gênero" options="Escolha seu gênero..., Masculino, Feminino" required="true"></beauty-select>
+            <beauty-button title="Clique para se cadastrar" text="Cadastrar"></beauty-button>
+        </form>
+
+    </div>
+</body>
+</html>

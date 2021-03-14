@@ -1,1 +1,6 @@
-# Projeto-P.O.O.-3-Semestre
+## Projeto de Programação Orientada a Objetos - Java
+
+#### Participantes
+
+- Anna Yukimi Yamada
+- Rafael Furtado Rodrigues dos Santos
