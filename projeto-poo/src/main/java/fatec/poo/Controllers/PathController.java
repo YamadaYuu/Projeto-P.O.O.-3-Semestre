@@ -17,5 +17,11 @@ public class PathController {
 		return "registro";
 		
 	}
+	
+	@GetMapping(value = "/editarCadastro")
+	public String editarCadastro() {
+		return "editarCadastro";
+		
+	}
 
 }
