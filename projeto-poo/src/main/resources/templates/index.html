@@ -5,10 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
+    <!-- Rodar no Eclipse-->
+    <link rel="stylesheet" href="css/GlobalComponents.css">
+    <link rel="stylesheet" href="css/BeautyButton.css">
+    
+    <script src="js/Utilitarios/ServerRequester.js"></script>
+    <script src="js/Paginas/EditarCadastro.js"></script>
+    <script src="js/Componentes/BeautyButton.js"></script>
+
+    <!-- Rodar no VSCode 
+    <link rel="stylesheet" href="../static/css/GlobalComponents.css">
+
+    <script src="../static/js/Utilitarios/ServerRequester.js"></script>
+    <script src="../static/js/Paginas/EditarCadastro.js"></script>
+    <script src="../static/js/BeautyButton.js"></script>
+    -->
 </head>
 <body>
+<div class="vBox">
     <h1>World Beauty Group</h1>
-    <button onclick="window.location.href='registro'">Registro</button>
-    <button onclick="window.location.href='editarCadastro'">Alterar cadastro</button>
+    
+    <beauty-button text="Registro" onclick="window.location.href='registro'"></beauty-button>
+    <beauty-button text="Alterar cadastro" onclick="window.location.href='editarCadastro'"></beauty-button>
+</div>
 </body>
 </html>

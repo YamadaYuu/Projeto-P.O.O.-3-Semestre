@@ -16,8 +16,6 @@ async function teste() {
 
 async function listarClients() {
     let resposta = await serverRequester.fazerGet("/readClients", {});
-    let divlista = document.createElement("div");
-    divlista.classList.add("vBox");
 
     for (let i = 0; i < resposta.length; i++) {
         const client = resposta[i];
@@ -27,8 +25,8 @@ async function listarClients() {
         let labelGenero = document.createElement("label");
         let labelTelefone = document.createElement("label");
         let labelNascimento = document.createElement("label");
-        let botaoEditarCadastro = document.createElement("beauty-button");
-        let botaoExcluirCadastro = document.createElement("beauty-button");
+        let botaoEditarCadastro = document.createElement("button");
+        let botaoExcluirCadastro = document.createElement("button");
 
         labelNome.textContent = "Nome: " + client["name"];
         labelGenero.textContent = "Gênero: " + client["gender"];
@@ -36,7 +34,6 @@ async function listarClients() {
         labelTelefone.textContent = "Telefone: " + client["telefone"];
 
         div.classList.add("hBox");
-        div.classList.add("clientesListados");
 
         botaoEditarCadastro.textContent = "Editar";
         botaoEditarCadastro.onclick = function () {
@@ -54,11 +51,9 @@ async function listarClients() {
         div.appendChild(botaoEditarCadastro);
         div.appendChild(botaoExcluirCadastro);
 
-        divlista.appendChild(div);
+        let body = document.getElementsByTagName("body")[0];
 
+        body.appendChild(div);
     }
-    let body = document.getElementsByTagName("body")[0];
-
-    body.appendChild(divlista);
 
 }
