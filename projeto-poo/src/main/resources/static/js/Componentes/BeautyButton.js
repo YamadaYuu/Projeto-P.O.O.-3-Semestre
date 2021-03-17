@@ -10,7 +10,7 @@ class BeautyButton extends HTMLElement{
 
         this.title;
         this.text;
-
+        this.type;
     }
 
     /**
@@ -21,9 +21,9 @@ class BeautyButton extends HTMLElement{
      */
     connectedCallback(){
         this.title = this.getAttribute("title");
-        this.text = this.getAttribute("text")
-
-        this.appendChild(this.buildBeautyButton(this.text, this.title))
+        this.text = this.getAttribute("text");
+        this.type = this.getAttribute("type");
+        this.appendChild(this.buildBeautyButton(this.text, this.title, this.type));
 
     }
 
@@ -35,7 +35,7 @@ class BeautyButton extends HTMLElement{
      * @param {function} callback Função à ser chamando quando o botão for clicado
      * @returns Elemento do botão
      */
-    buildBeautyButton(text, title, callback){
+    buildBeautyButton(text, title, type, callback){
         let button = document.createElement("button");
         button.classList.add("beautyButton");
         button.textContent = text;
@@ -46,9 +46,17 @@ class BeautyButton extends HTMLElement{
                 callback();
 
             }
-
         }
-
+        switch (type) {
+            case "aceitar":
+                button.classList.add("beautyButtonAceitar");
+                break;
+            case "recusar":
+                button.classList.add("beautyButtonRecusar");
+                break;
+            default:
+                break;
+        }
         return button;
     }
 

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edição de cadastro</title>
 
     <!-- Rodar no Eclipse-->
     <link rel="stylesheet" href="css/GlobalComponents.css">
@@ -14,17 +13,21 @@
     <script src="js/Utilitarios/ServerRequester.js"></script>
     <script src="js/Paginas/EditarCadastro.js"></script>
     <script src="js/Componentes/BeautyButton.js"></script>
-
+    
     <!-- Rodar no VSCode 
     <link rel="stylesheet" href="../static/css/GlobalComponents.css">
-
+    <link rel="stylesheet" href="../static/css/BeautyButton.css">
+    <link rel="stylesheet" href="../static/css/BeautyDados.css">
     <script src="../static/js/Utilitarios/ServerRequester.js"></script>
     <script src="../static/js/Paginas/EditarCadastro.js"></script>
-    <script src="../static/js/BeautyButton.js"></script>
+    <script src="../static/js/Componentes/BeautyButton.js"></script>
     -->
 
 </head>
-<body>
-    <beauty-button text="Listar Clientes" title="Lista os Clientes" onclick="listarClients()"></beauty-button>
-</body>
+    <body>
+        <div class="vBox vBoxBorder" id="vboxEditar">
+            <h2 class="title">Edição de cadastro</h2>
+            <beauty-button text="Listar Clientes" title="Lista os Clientes" type="aceitar" onclick="listarClients()"></beauty-button>
+        </div>
+    </body>
 </html>

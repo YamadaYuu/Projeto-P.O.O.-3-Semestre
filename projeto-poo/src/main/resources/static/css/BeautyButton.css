@@ -5,7 +5,7 @@
     border: none;
 
     margin: 5px;
-    background-color: var(--signUpButtonBgColor);
+    
     color: cornsilk;  /* Cor do texto */
 
     transition: 0.1s;  /* Transição para clicar */
@@ -25,3 +25,33 @@
 .beautyButton:active{
     background: var(--signUpButtonActiveColor);
 }
+
+.beautyButtonRecusar{
+    background-color: rgb(175, 0, 0);
+}
+.beautyButtonAceitar{
+    background-color: var(--signUpButtonBgColor);
+}
+
+.beautyButtonAceitar:hover{
+    background-color: var(--signUpButtonHoverColor);
+
+    cursor: pointer;
+}
+
+.beautyButtonAceitar:focus{
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(53, 151, 146, 0.568);
+}
+
+.beautyButtonRecusar:hover{
+    background-color:  rgb(207, 0, 0);
+
+    cursor: pointer;
+}
+
+.beautyButtonRecusar:focus{
+    outline: none;
+    box-shadow: 0px 0px 10px rgb(87, 0, 0);
+}
+

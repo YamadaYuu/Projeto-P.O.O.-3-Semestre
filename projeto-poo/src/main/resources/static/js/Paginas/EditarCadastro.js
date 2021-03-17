@@ -18,6 +18,8 @@ async function listarClients() {
     let resposta = await serverRequester.fazerGet("/readClients", {});
     let divlista = document.createElement("div");
     divlista.classList.add("vBox");
+    let beautyButton = new BeautyButton();
+    let vBoxEditar = document.getElementById("vboxEditar");
 
     for (let i = 0; i < resposta.length; i++) {
         const client = resposta[i];
@@ -27,8 +29,8 @@ async function listarClients() {
         let labelGenero = document.createElement("label");
         let labelTelefone = document.createElement("label");
         let labelNascimento = document.createElement("label");
-        let botaoEditarCadastro = document.createElement("beauty-button");
-        let botaoExcluirCadastro = document.createElement("beauty-button");
+        let botaoEditarCadastro = beautyButton.buildBeautyButton("Editar","Editar Cadastro","aceitar");
+        let botaoExcluirCadastro = beautyButton.buildBeautyButton("Excluir","Excluir Cadastro","recusar");
 
         labelNome.textContent = "Nome: " + client["name"];
         labelGenero.textContent = "Gênero: " + client["gender"];
@@ -55,10 +57,8 @@ async function listarClients() {
         div.appendChild(botaoExcluirCadastro);
 
         divlista.appendChild(div);
-
     }
-    let body = document.getElementsByTagName("body")[0];
 
-    body.appendChild(divlista);
+    vBoxEditar.appendChild(divlista);
 
 }
