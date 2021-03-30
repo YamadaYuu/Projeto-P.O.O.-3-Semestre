@@ -3,6 +3,8 @@ function submeterFormulario(event){
 
     realizarCadastro();
 
+    alert("Cadastro realizado!");
+
 }
 
 async function realizarCadastro(){

@@ -29,17 +29,21 @@
 .beautyButtonRecusar{
     background-color: rgb(175, 0, 0);
 }
-.beautyButtonAceitar{
+.beautyButtonNormal{
     background-color: var(--signUpButtonBgColor);
 }
 
-.beautyButtonAceitar:hover{
+.beautyButtonNormal:hover{
     background-color: var(--signUpButtonHoverColor);
 
     cursor: pointer;
 }
 
-.beautyButtonAceitar:focus{
+.beautyButtonNormal:active{
+    background: var(--signUpButtonActiveColor);
+}
+
+.beautyButtonNormal:focus{
     outline: none;
     box-shadow: 0px 0px 10px rgba(53, 151, 146, 0.568);
 }

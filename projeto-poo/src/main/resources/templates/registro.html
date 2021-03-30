@@ -49,7 +49,12 @@
 
 </head>
 <body>
-    <div class="vBox vBoxBorder">
+    <div class="topBar">
+        <label onclick="window.location.href='/'" class="titleLabel"><b>World Beauty</b></label>
+        <label class="cadastrarLabel"><b>Entrar</b></label>
+    </div>
+
+    <div class="vBox">
 
         <div class="vBox">
             <h2 class="title">Realizar cadastro em World Beauty</h2>
@@ -61,7 +66,7 @@
             <beauty-input id="telefoneInput" type="text" title="Insira seu telefone" icon="phone" placeholder="Telefone" required="true"></beauty-input>
             <beauty-input id="dataNascimentoInput" type="date" title="Insira sua data de nascimento" icon="calendar-alt" placeholder="Data de nascimento" required="true"></beauty-input>
             <beauty-select id="generoSelect" title="Escolha seu gênero" options="Escolha seu gênero..., Masculino, Feminino" required="true"></beauty-select>
-            <beauty-button title="Clique para se cadastrar" type="aceitar" text="Cadastrar"></beauty-button>
+            <beauty-button title="Clique para se cadastrar" type="normal" text="Cadastrar"></beauty-button>
         </form>
 
     </div>
