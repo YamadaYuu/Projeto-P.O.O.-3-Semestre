@@ -25,7 +25,11 @@ public class User {
 	@Column(name = "telefone")
 	private String phone;
 	
+	@Column(name = "email")
+	private String email;
 	
+	@Column(name = "senha")
+	private String senha;
 
 
 	public String getName() {

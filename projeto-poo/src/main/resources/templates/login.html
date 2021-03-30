@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <link rel="stylesheet" href="css/GlobalComponents.css">
+    <link rel="stylesheet" href="css/BeautyInput.css">
+    <link rel="stylesheet" href="css/BeautyButton.css">
+    <link rel="stylesheet" href="css/Login.css">
+
+    <script src="js/Utilitarios/ServerRequester.js"></script>
+
+    <script src="js/Componentes/BeautyInput.js"></script>
+    <script src="js/Componentes/BeautyButton.js"></script>
+
+
+</head>
+
+<body>
+    <div class="topBar">
+        <label onclick="window.location.href='/'" class="titleLabel"><b>World Beauty</b></label>
+        <label onclick="window.location.href='registro'" class="cadastrarLabel"><b>Cadastrar-se</b></label>
+    </div>
+
+    <div class="vBox">
+
+        <div class="vBox">
+            <h2 class="title">Realizar login em World Beauty</h2>
+            <p>Insira seu e-mail e senha para entrar no sistema</p>
+        </div>
+
+        <form class="vBox" onsubmit="submeterFormulario(event)">
+            <beauty-input id="email" type="text" title="Insira seu e-mail" icon="envelope" placeholder="E-mail" required="true"></beauty-input>
+            <beauty-input id="senha" type="text" title="Insira sua senha" icon="key" placeholder="Senha" required="true"></beauty-input>
+            <beauty-button title="Clique para realizar o login" type="normal" text="Entrar"></beauty-button>
+        </form>
+
+    </div>
+</body>
+</html>

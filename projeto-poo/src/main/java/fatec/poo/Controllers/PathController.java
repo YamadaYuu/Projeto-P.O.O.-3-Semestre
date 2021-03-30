@@ -23,5 +23,11 @@ public class PathController {
 		return "editarCadastro";
 		
 	}
+	
+	@GetMapping(value = "/login")
+	public String login() {
+		return "login";
+		
+	}
 
 }

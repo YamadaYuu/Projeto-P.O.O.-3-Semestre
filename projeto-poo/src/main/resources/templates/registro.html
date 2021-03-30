@@ -51,7 +51,7 @@
 <body>
     <div class="topBar">
         <label onclick="window.location.href='/'" class="titleLabel"><b>World Beauty</b></label>
-        <label class="cadastrarLabel"><b>Entrar</b></label>
+        <label onclick="window.location.href='login'" class="cadastrarLabel"><b>Entrar</b></label>
     </div>
 
     <div class="vBox">
@@ -64,6 +64,8 @@
         <form class="vBox" onsubmit="submeterFormulario(event)">
             <beauty-input id="nameInput" type="text" title="Insira seu nome" icon="user" placeholder="Nome" required="true"></beauty-input>
             <beauty-input id="telefoneInput" type="text" title="Insira seu telefone" icon="phone" placeholder="Telefone" required="true"></beauty-input>
+            <beauty-input id="email" type="text" title="Insira seu e-mail" icon="envelope" placeholder="E-mail" required="true"></beauty-input>
+            <beauty-input id="senha" type="password" title="Insira sua senha" icon="key" placeholder="Senha" required="true"></beauty-input>
             <beauty-input id="dataNascimentoInput" type="date" title="Insira sua data de nascimento" icon="calendar-alt" placeholder="Data de nascimento" required="true"></beauty-input>
             <beauty-select id="generoSelect" title="Escolha seu gênero" options="Escolha seu gênero..., Masculino, Feminino" required="true"></beauty-select>
             <beauty-button title="Clique para se cadastrar" type="normal" text="Cadastrar"></beauty-button>
