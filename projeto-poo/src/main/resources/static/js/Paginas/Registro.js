@@ -14,6 +14,8 @@ async function realizarCadastro(){
     client.setGender(document.getElementById("generoSelect-select").value);
     client.setPhone(document.getElementById("telefoneInput-input").value);
     client.setBirthDate(dateParser.getDateFrom("dataNascimentoInput-input"));
+    client.setEmail(document.getElementById("email-input").value);
+    client.setSenha(document.getElementById("senha-input").value);
 
     await serverRequester.fazerPost("/signUp", client.getClientData());
 

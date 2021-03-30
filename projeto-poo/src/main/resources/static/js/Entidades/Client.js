@@ -5,12 +5,16 @@ class Client {
             this.gender = data["gender"];
             this.phone = data["phone"];
             this.birthDate = data["birthDate"];
+            this.email = data["email"];
+            this.senha = data["senha"];
 
         } else {
             this.name;
             this.gender;
             this.phone;
             this.birthDate;
+            this.email;
+            this.senha;
 
         }
 
@@ -25,6 +29,8 @@ class Client {
         data["gender"] = this.gender;
         data["phone"] = this.phone;
         data["birthDate"] = this.birthDate;
+        data["email"] = this.phone;
+        data["senha"] = this.senha;
 
         return data;
     }
@@ -45,6 +51,14 @@ class Client {
         this.birthDate = birthDate;
     }
 
+    setEmail(email) {
+        this.email = email;
+    }
+
+    setSenha(senha) {
+        this.senha = senha;
+    }
+
     getName() {
         return this.name;
     }
@@ -59,6 +73,14 @@ class Client {
 
     getBirthDate() {
         return this.birthDate;
+    }
+    
+    getEmail() {
+        return this.email;
+    }
+    
+    getSenha() {
+        return this.senha;
     }
 
 }
