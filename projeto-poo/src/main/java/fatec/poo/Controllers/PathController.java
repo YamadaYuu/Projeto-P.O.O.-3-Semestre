@@ -29,5 +29,6 @@ public class PathController {
 		return "login";
 		
 	}
+	
 
 }

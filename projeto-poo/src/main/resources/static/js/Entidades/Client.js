@@ -29,7 +29,7 @@ class Client {
         data["gender"] = this.gender;
         data["phone"] = this.phone;
         data["birthDate"] = this.birthDate;
-        data["email"] = this.phone;
+        data["email"] = this.email;
         data["senha"] = this.senha;
 
         return data;

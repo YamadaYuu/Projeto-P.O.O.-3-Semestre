@@ -20,7 +20,7 @@ class ServerRequester{
      * @param {Object} parametros - JSON com parâmetros para a requisição, no formato chave:valor
      * @returns JSON - Retorna um objeto JSON contendo a resposta do servidor para o serviço solicitado
      */
-    async fazerGet(caminhoRest, parametros){
+    async fazerGet(caminhoRest, parametros = {}){
         let url = this.serverURL + caminhoRest;
         let configsGet = {
                             method: "GET",
@@ -60,12 +60,15 @@ class ServerRequester{
      * @param {Object} data - JSON com parâmetros para a requisição, no formato chave:valor
      * @returns JSON - Retorna um objeto JSON contendo a resposta do servidor para o serviço solicitado
      */
-    async fazerPost(caminhoRest, data){
+    async fazerPost(caminhoRest, data = {}){
         let url = this.serverURL + caminhoRest;
         let configsPost = {
                             method: "POST",
-                            body: JSON.stringify(data)
-                          }
+                            body: JSON.stringify(data),
+                            headers: {
+                                "Content-Type": "application/json"   
+                                }
+                        };
 
         // Faz a requisição para a URL construída e obtêm sua resposta como JSON
         return await this.fazerRequisicao(url, configsPost);
@@ -85,8 +88,19 @@ class ServerRequester{
      */
     async fazerRequisicao(url, configs){
         let requisicao = await fetch(url, configs);
+        let responseJson;
+        try{
+            responseJson = await requisicao.json();
+        }catch{
 
-        let resposta = await requisicao.json();
+        }
+
+        let resposta = {}
+        resposta["ok"] = requisicao.ok;
+        resposta["status"] = requisicao.status;
+        if(responseJson != undefined){
+            resposta["responseJson"] = responseJson;
+        }
 
         return resposta;
     }
