@@ -48,11 +48,11 @@ class BeautyButton extends HTMLElement{
             }
         }
         switch (type) {
-            case "aceitar":
-                button.classList.add("beautyButtonAceitar");
+            case "normal":
+                button.classList.add("beautyButtonNormal");
                 break;
-            case "recusar":
-                button.classList.add("beautyButtonRecusar");
+            case "red":
+                button.classList.add("beautyButtonRed");
                 break;
             default:
                 break;

@@ -8,7 +8,7 @@ public class PathController {
 
 	@GetMapping(value = "/")
 	public String home() {
-		return "index";
+		return "home";
 		
 	}
 	
