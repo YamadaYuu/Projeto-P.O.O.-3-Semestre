@@ -30,5 +30,9 @@ public class PathController {
 		
 	}
 	
-
+	@GetMapping(value = "/homeAdmin")
+	public String homeAdmin() {
+		return "homeAdm";
+		
+	}
 }

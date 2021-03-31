@@ -5,29 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Rodar no Eclipse-->
-    <link rel="stylesheet" href="css/GlobalComponents.css">
-    <link rel="stylesheet" href="css/BeautyButton.css">
-    <link rel="stylesheet" href="css/BeautyDados.css">
-    
+    <!-- CDN das depedências externas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/EditarCadastro.css">
+
     <script src="js/Utilitarios/ServerRequester.js"></script>
-    <script src="js/Paginas/EditarCadastro.js"></script>
-    <script src="js/Componentes/BeautyButton.js"></script>
-    
-    <!-- Rodar no VSCode 
-    <link rel="stylesheet" href="../static/css/GlobalComponents.css">
-    <link rel="stylesheet" href="../static/css/BeautyButton.css">
-    <link rel="stylesheet" href="../static/css/BeautyDados.css">
-    <script src="../static/js/Utilitarios/ServerRequester.js"></script>
-    <script src="../static/js/Paginas/EditarCadastro.js"></script>
-    <script src="../static/js/Componentes/BeautyButton.js"></script>
-    -->
+    <script src="js/Paginas/EditarCadastro.js" defer></script>
 
 </head>
     <body>
-        <div class="vBox vBoxBorder" id="vboxEditar">
-            <h2 class="title">Edição de cadastro</h2>
-            <beauty-button text="Listar Clientes" title="Lista os Clientes" type="aceitar" onclick="listarClients()"></beauty-button>
+        <div class="topBar">
+            <label class="titleLabel"><b>World Beauty</b></label>
+            <label onclick="window.location.href='/'" class="cadastrarLabel"><b>Sair</b></label>
+            <label onclick="window.location.href='homeAdmin'" class="cadastrarLabel">Home</label>
+        </div>
+        <div id="mostrarConteudo">
+            <h2>Clientes no sistema</h2>
         </div>
     </body>
 </html>
