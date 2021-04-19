@@ -4,7 +4,7 @@ async function submeterFormulario(event){
     let aceito = await realizarLogin();
 
     if(aceito){
-        alert("Login realizado!");
+        window.location.href = "homeAdmin";
     }else{
         alert("Login recusado!");
     }
