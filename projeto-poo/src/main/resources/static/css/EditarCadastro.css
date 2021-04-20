@@ -63,6 +63,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-left: 30px;
 }
 
 .usuarioContainer{
@@ -70,13 +71,14 @@ body{
     flex-direction: row;
     margin-left: 30px;
     margin-right: 30px;
-    background-color: #418e31;
     padding: 10px;
     border-radius: 10px;
 }
 
 .info{
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .bEditar{
@@ -91,4 +93,5 @@ body{
     border: 0px;
     border-radius: 10px;
     font-family: 'Poppins';
+
 }

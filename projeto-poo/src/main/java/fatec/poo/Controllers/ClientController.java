@@ -64,4 +64,17 @@ public class ClientController {
 		
 	}
 	
+    @PostMapping(value = "/update")
+	public boolean updateClient(@RequestBody Client client) {
+		try{
+			clientRepository.save(client);
+			
+			return true;
+		}catch (Exception e) {
+			
+			return false;
+		}
+		
+	}
+	
 }

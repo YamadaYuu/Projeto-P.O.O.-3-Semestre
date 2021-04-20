@@ -3,7 +3,7 @@ class Client {
         if (data != undefined) {
             this.name = data["name"];
             this.gender = data["gender"];
-            this.phone = data["phone"];
+            this.phone = data["telefone"];
             this.birthDate = data["birthDate"];
             this.email = data["email"];
             this.senha = data["senha"];
@@ -27,7 +27,7 @@ class Client {
 
         data["name"] = this.name;
         data["gender"] = this.gender;
-        data["phone"] = this.phone;
+        data["telefone"] = this.phone;
         data["birthDate"] = this.birthDate;
         data["email"] = this.email;
         data["senha"] = this.senha;
