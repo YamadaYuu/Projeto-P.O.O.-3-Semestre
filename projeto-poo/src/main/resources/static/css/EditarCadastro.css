@@ -72,8 +72,23 @@ body{
     margin-right: 30px;
     background-color: #418e31;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .info{
     margin-bottom: 10px;
+}
+
+.bEditar{
+    background-color: #b7ff61;
+    border: 0px;
+    border-radius: 10px;
+    font-family: 'Poppins';
+}
+
+.bApagar{
+    background-color: #ff4040;
+    border: 0px;
+    border-radius: 10px;
+    font-family: 'Poppins';
 }
