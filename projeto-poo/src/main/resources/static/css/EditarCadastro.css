@@ -84,14 +84,15 @@ body{
 .bEditar{
     background-color: #b7ff61;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 15px;
     font-family: 'Poppins';
+    padding: 5px 15px;
 }
 
 .bApagar{
     background-color: #ff4040;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 15px;
     font-family: 'Poppins';
-
+    padding: 5px 15px;
 }
