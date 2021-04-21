@@ -88,11 +88,22 @@ body{
     font-family: 'Poppins';
     padding: 5px 15px;
 }
+.bEditar:hover{
+    background-color: #bfff70;
+}
+.bEditar:active{
+    background-color: #d4ffa0;
+}
 
 .bApagar{
-    background-color: #ff4040;
+    background-color: #fd2626;
     border: 0px;
     border-radius: 15px;
     font-family: 'Poppins';
-    padding: 5px 15px;
+}
+.bApagar{
+    background-color: #ff6868;
+}
+.bApagar{
+    background-color: #ff9393;
 }
