@@ -12,7 +12,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@Column(name = "nome", nullable = false)
 	private String name;
 
@@ -78,6 +78,14 @@ public class User {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 	
 }

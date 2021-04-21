@@ -7,6 +7,7 @@ class Client {
             this.birthDate = data["birthDate"];
             this.email = data["email"];
             this.senha = data["senha"];
+            this.id = data["id"];
 
         } else {
             this.name;
@@ -15,6 +16,7 @@ class Client {
             this.birthDate;
             this.email;
             this.senha;
+            this.id;
 
         }
 
@@ -31,6 +33,7 @@ class Client {
         data["birthDate"] = this.birthDate;
         data["email"] = this.email;
         data["senha"] = this.senha;
+        data["id"] = this.id;
 
         return data;
     }

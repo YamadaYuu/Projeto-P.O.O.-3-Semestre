@@ -7,9 +7,12 @@ async function listarClients() {
         const client = entidades[i];
 
         let user = new Client(client);
+
+        let userIdentifier = "user" + (i + 1);
         
         let usuarioContainer = document.createElement("div");
         usuarioContainer.classList.add("usuarioContainer");
+        usuarioContainer.id = userIdentifier;
 
         let userInfo1 = document.createElement("div");
         userInfo1.classList.add("userInfo");
@@ -93,13 +96,15 @@ async function listarClients() {
 
         let buttonExcluir = document.createElement("button");
         buttonExcluir.textContent = "Excluir";
+        buttonExcluir.classList.add("bApagar");
         buttonExcluir.onclick = function(){
-            console.log('excluir');
+            deleteUser(userIdentifier, user);
         }
         let buttonSalvar = document.createElement("button");
         buttonSalvar.textContent = "Salvar";
+        buttonSalvar.classList.add("bEditar");
         buttonSalvar.onclick = function(){
-            console.log('Salvar');
+            saveChanges(userIdentifier, user);
         }
 
         manageButtonsContainer.appendChild(buttonExcluir);
@@ -114,5 +119,40 @@ async function listarClients() {
     }
 
 }
+
+
+function saveChanges(userIdentifier, user){
+    let container = document.getElementById(userIdentifier);
+
+    let inputs = container.getElementsByTagName("input");
+
+    let nome = inputs[0];
+    let email = inputs[1];
+    let telefone = inputs[2];
+    let nascimento = inputs[3];
+
+    let select = container.getElementsByTagName("select")[0];
+
+    user.setName(nome.value);
+    user.setEmail(email.value);
+    user.setPhone(telefone.value);
+    user.setBirthDate(nascimento.value);
+    user.setGender(select.value);
+
+    serverRequester.fazerPost("/update", user.getClientData());
+
+    alert("Alterações salvas");
+}
+
+function deleteUser(userIdentifier, user) {
+    serverRequester.fazerPost("/delete", user);
+
+    let container = document.getElementById(userIdentifier);
+    
+    container.remove();
+
+    alert("Cliente excluído");
+}
+
 
 listarClients();

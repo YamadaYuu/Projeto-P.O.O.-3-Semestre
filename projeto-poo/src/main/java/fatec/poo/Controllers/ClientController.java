@@ -66,8 +66,22 @@ public class ClientController {
 	
     @PostMapping(value = "/update")
 	public boolean updateClient(@RequestBody Client client) {
+    	System.out.println(client.getId());
 		try{
 			clientRepository.save(client);
+			
+			return true;
+		}catch (Exception e) {
+			
+			return false;
+		}
+		
+	}
+    
+    @PostMapping(value = "/delete")
+	public boolean deleteClient(@RequestBody Client client) {
+		try{
+			clientRepository.delete(client);
 			
 			return true;
 		}catch (Exception e) {

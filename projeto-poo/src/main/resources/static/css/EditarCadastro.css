@@ -87,6 +87,8 @@ body{
     border-radius: 15px;
     font-family: 'Poppins';
     padding: 5px 15px;
+    outline: none;
+    cursor: pointer;
 }
 .bEditar:hover{
     background-color: #bfff70;
@@ -100,6 +102,8 @@ body{
     border: 0px;
     border-radius: 15px;
     font-family: 'Poppins';
+    outline: none;
+    cursor: pointer;
 }
 .bApagar{
     background-color: #ff6868;
