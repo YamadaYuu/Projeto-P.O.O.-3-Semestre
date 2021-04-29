@@ -23,7 +23,7 @@ public class User {
 	private String birthDate;
 	
 	@Column(name = "telefone")
-	private String phone;
+	private String telefone;
 	
 	@Column(name = "email")
 	private String email;
@@ -57,11 +57,11 @@ public class User {
 	}
 
 	public String getTelefone() {
-		return phone;
+		return telefone;
 	}
 
 	public void setTelefone(String phone) {
-		this.phone = phone;
+		this.telefone = phone;
 	}
 
 	public String getEmail() {

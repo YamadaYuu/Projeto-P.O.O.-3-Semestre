@@ -13,7 +13,7 @@ async function realizarCadastro(){
     client.setName(document.getElementById("nameInput-input").value);
     client.setGender(document.getElementById("generoSelect-select").value);
     client.setPhone(document.getElementById("telefoneInput-input").value);
-    client.setBirthDate(dateParser.getDateFrom("dataNascimentoInput-input"));
+    client.setBirthDate(document.getElementById("dataNascimentoInput-input").value);
     client.setEmail(document.getElementById("email-input").value);
     client.setSenha(document.getElementById("senha-input").value);
 
